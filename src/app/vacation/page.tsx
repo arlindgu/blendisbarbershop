@@ -1,15 +1,15 @@
 export default function VacationPage() {
 
     const vacationInfo = {
-        returnDate: "15. Januar"
+        returnDate: "15. Januar",
+        cause: "Betriebsurlaub"
     }
-
-
+    
     return (
       <div className="justify-center items-center flex flex-col h-screen">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-foreground mb-4 max-w-5xl">
-            Betriebsurlaub
+            {vacationInfo.cause}
           </h1>
           <h2 className="text-2xl font-semibold text-foreground mb-4 max-w-5xl">
             Der Barbershop ist vorübergehend geschlossen.
