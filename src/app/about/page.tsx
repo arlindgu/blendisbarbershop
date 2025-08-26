@@ -2,7 +2,7 @@ export default function AboutPage() {
 return (
   <div>
     <div className="min-h-screen bg-background mt-32">
-      <div className="container mx-auto px-4 py-8 max-w-4xl mx-auto">
+      <div className="container mx-auto px-4 py-8 max-w-6xl">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-foreground mb-4">Über Mich</h1>
           <p className="text-xl text-muted-foreground">
