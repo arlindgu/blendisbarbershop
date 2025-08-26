@@ -16,7 +16,7 @@ export default function LocationPage() {
           {/* Header */}
           <div className="text-center mb-8">
             <h1 className="text-4xl font-bold text-foreground mb-4">
-              Uner Standort und Öffnungszeiten
+              Unser Standort und Öffnungszeiten
             </h1>
             <p className="text-xl text-muted-foreground">
               Besuchen Sie uns an unserem zentralen Standort

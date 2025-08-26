@@ -6,7 +6,7 @@ import BookingButton from "../ui/bookingbutton";
 
 const Navbar04Page = () => {
   return (
-    <nav className="h-16 fixed top-6 inset-x-4 bg-background border rounded-full">
+    <nav className="h-16 fixed top-6 inset-x-4 bg-background border rounded-full z-50">
       <div className="h-full flex items-center justify-between mx-auto px-4">
         <Logo />
 
