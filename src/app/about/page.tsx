@@ -2,7 +2,7 @@ export default function AboutPage() {
 return (
   <div className="container mx-auto p-8 mt-32 mx-auto">
     <h1 className="text-4xl leading-tight font-bold tracking-tight @md:text-5xl @lg:text-6xl">
-      Über uns - Blendi's Barbershop
+      Über uns - Blendi&apos;s Barbershop
     </h1>
     <h2 className="mt-8 mb-4 text-2xl font-bold">
       Willkommen in der Welt von Blendi
@@ -23,8 +23,9 @@ return (
     </p>
     <h2 className="mt-8 mb-4 text-2xl font-bold">Meine Philosophie</h2>
     <p>
-      "Jeder Mann verdient es, sich großartig zu fühlen. Ein guter Haarschnitt
-      ist nicht nur Styling – es ist Selbstvertrauen, das man trägt."
+      &quot;Jeder Mann verdient es, sich großartig zu fühlen. Ein guter
+      Haarschnitt ist nicht nur Styling – es ist Selbstvertrauen, das man
+      trägt.&quot;
     </p>
     <p>
       Bei mir steht der Kunde im Mittelpunkt. Ich nehme mir die Zeit, jeden
@@ -45,7 +46,9 @@ return (
       ultimatives Entspannungserlebnis und individuelles Style-Consulting für
       Ihren persönlichen Look.
     </p>
-    <h2 className="mt-8 mb-4 text-2xl font-bold">Mehr als nur ein Haarschnitt</h2>
+    <h2 className="mt-8 mb-4 text-2xl font-bold">
+      Mehr als nur ein Haarschnitt
+    </h2>
     <p>
       Mein Barbershop ist ein Rückzugsort für Männer. Hier können Sie
       abschalten, sich entspannen und sich eine Auszeit vom Alltag gönnen. Bei
@@ -59,7 +62,9 @@ return (
       Jedes Werkzeug wird sorgfältig gepflegt und regelmäßig geschärft, denn
       Präzision beginnt mit dem richtigen Equipment.
     </p>
-    <h2 className="mt-8 mb-4 text-2xl font-bold">Kontinuierliche Weiterbildung</h2>
+    <h2 className="mt-8 mb-4 text-2xl font-bold">
+      Kontinuierliche Weiterbildung
+    </h2>
     <p>
       Die Barbier-Welt entwickelt sich ständig weiter, und ich entwickle mich
       mit. Regelmäßige Fortbildungen, Workshops mit internationalen Barbieren
@@ -76,7 +81,9 @@ return (
       teuerste Service ist. Zusätzlich erhalten Sie Styling-Tipps und
       Pflegehinweise für zu Hause.
     </p>
-    <h2 className="mt-8 mb-4 text-2xl font-bold">Warum Blendi's Barbershop?</h2>
+    <h2 className="mt-8 mb-4 text-2xl font-bold">
+      Warum Blendi&apos;s Barbershop?
+    </h2>
     <p>
       Hier treffen Tradition und Moderne aufeinander. Sie bekommen nicht nur
       einen Haarschnitt, sondern ein Erlebnis. Von dem Moment, in dem Sie durch
@@ -89,7 +96,7 @@ return (
     </p>
     <p>
       Buchen Sie noch heute Ihren Termin und erleben Sie, warum meine Kunden
-      immer wieder gerne kommen. Bei Blendi's Barbershop sind Sie nicht nur
+      immer wieder gerne kommen. Bei Blendi&apos;s Barbershop sind Sie nicht nur
       Kunde – Sie sind Teil der Familie.
     </p>
   </div>

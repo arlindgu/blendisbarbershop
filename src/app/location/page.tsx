@@ -1,13 +1,12 @@
 import {
   Card,
   CardContent,
-  CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { MapPin, Clock, Phone, Mail, Car, Bus } from "lucide-react";
+import { MapPin, Clock, Phone, Car, Bus } from "lucide-react";
 
 export default function LocationPage() {
   return (
