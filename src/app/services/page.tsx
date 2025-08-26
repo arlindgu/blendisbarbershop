@@ -1,122 +1,107 @@
 "use client"
-import Link from "next/link";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
-import { Button } from "@/components/ui/button";
-import { Scissors, MapPin, User, Calendar } from "lucide-react";
+import { Scissors, CirclePlus, Slice, Calendar } from "lucide-react";
 import CalEmbed from "@/components/ui/bookingcal";
+import PageHeader from "@/components/ui/header";
 
 export default function ServicesPage() {
+
+  const services = [
+    {
+      title: "Haarschnitt",
+      description:
+        "Professioneller Haarschnitt für Erwachsene und Jugendliche.",
+      prices: [
+        { label: "Erwachsene", ageGroup: "ab 18 Jahren", price: "CHF 30" },
+        { label: "Jugendliche", ageGroup: "unter 18 Jahren", price: "CHF 20" },
+        { label: "Kinder", ageGroup: "unter 12 Jahren", price: "CHF 15" },
+        { label: "Design", ageGroup: "", price: "+ CHF 10" },
+      ],
+    },
+    {
+      title: "Bart",
+      description: "Individuelles Bart Styling für jeden Typ.",
+      prices: [
+        { label: "Bart rasieren", ageGroup: "", price: "CHF 10" },
+        { label: "Bart färben", ageGroup: "", price: "CHF 15" },
+      ],
+    },
+    {
+      title: "Weitere Services",
+      description: "Zusätzliche Dienstleistungen für unsere Kunden.",
+      prices: [
+        { label: "Augenbrauen", ageGroup: "", price: "CHF 15" },
+        { label: "Wax Maske", ageGroup: "", price: "CHF 25" },
+      ],
+    },
+  ];
+
+
+
+
+
   return (
     <div className="min-h-screen bg-background mt-32">
       <div className="container mx-auto px-4 py-8 max-w-6xl">
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-foreground mb-4">
-            Unsere Services und Preise
-          </h1>
-          <p className="text-xl text-muted-foreground">
-            Professionelle Barber-Dienstleistungen mit transparenten Preisen.
-            Qualitätsschnitte und -stylings für jeden Anlass.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          <Card className="shadow-lg hover:shadow-xl transition-shadow">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Scissors className="h-5 w-5" />
-                Hair Styling
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="p-6">
-              <Table>
-                <TableBody>
-                  <TableRow>
-                    <TableCell className="font-medium">
-                      Erwachsenen Haarschnitt
-                    </TableCell>
-                    <TableCell className="text-right font-bold text-foreground">
-                      CHF 30
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium">
-                      Kinder Haarschnitt
-                    </TableCell>
-                    <TableCell className="text-right font-bold text-foreground">
-                      CHF 20
-                    </TableCell>
-                  </TableRow>
-                </TableBody>
-              </Table>
-            </CardContent>
-          </Card>
-
-          <Card className="shadow-lg hover:shadow-xl transition-shadow">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <User className="h-5 w-5" />
-                Bart Styling
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="p-6">
-              <Table>
-                <TableBody>
-                  <TableRow>
-                    <TableCell className="font-medium">Bart Styling</TableCell>
-                    <TableCell className="text-right font-bold text-foreground">
-                      CHF 10
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium">Bart Färben</TableCell>
-                    <TableCell className="text-right font-bold text-foreground">
-                      CHF 15
-                    </TableCell>
-                  </TableRow>
-                </TableBody>
-              </Table>
-            </CardContent>
-          </Card>
-
-          <Card className="shadow-lg hover:shadow-xl transition-shadow">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Calendar className="h-5 w-5" />
-                Anderes Styling
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="p-6">
-              <Table>
-                <TableBody>
-                  <TableRow>
-                    <TableCell className="font-medium">Wachsmaske</TableCell>
-                    <TableCell className="text-right font-bold text-foreground">
-                      CHF 15
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium">Augenbrauen</TableCell>
-                    <TableCell className="text-right font-bold text-foreground">
-                      CHF 10
-                    </TableCell>
-                  </TableRow>
-                </TableBody>
-              </Table>
-            </CardContent>
-          </Card>
+        <PageHeader
+          title="Unsere Services und Preise"
+          description="Entdecke unsere vielfältigen Dienstleistungen und Preise"
+        />
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+          {services.map((service, idx) => (
+            <Card
+              key={service.title}
+              className="shadow-lg hover:shadow-xl transition-shadow"
+            >
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  {idx === 0 && <Scissors className="h-5 w-5" />}
+                  {idx === 1 && <Slice className="h-5 w-5" />}
+                  {idx === 2 && <CirclePlus className="h-5 w-5" />}
+                  {service.title}
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="p-6">
+                <Table>
+                  <TableBody>
+                    {service.prices.map((price, i) => (
+                      <TableRow key={i}>
+                        <TableCell className="font-medium">
+                          {price.label}
+                        </TableCell>
+                        {"ageGroup" in price ? (
+                          <>
+                            <TableCell className="text-right text-muted-foreground text-xs">
+                              {price.ageGroup}
+                            </TableCell>
+                            <TableCell className="text-right text-muted-foreground">
+                              {price.price}
+                            </TableCell>
+                          </>
+                        ) : (
+                          <TableCell className="text-right text-muted-foreground">
+                          </TableCell>
+                        )}
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              </CardContent>
+            </Card>
+          ))}
 
           <Card className="md:col-span-3">
             <CardHeader>
-              <CardTitle>
-                Bereit für einen Termin?
+              <CardTitle className="flex items-center gap-2">
+                <Calendar className="h-5 w-5" />
+                Online Termin buchen
               </CardTitle>
             </CardHeader>
             <CardContent>
               <CalEmbed />
             </CardContent>
           </Card>
-
         </div>
       </div>
     </div>

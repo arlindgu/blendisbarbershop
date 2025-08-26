@@ -7,21 +7,14 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { MapPin, Clock, Phone, Car, Bus, Instagram } from "lucide-react";
+import PageHeader from "@/components/ui/header";
 
 export default function LocationPage() {
   return (
     <main className="min-h-screen bg-background mt-32">
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-6xl mx-auto">
-          {/* Header */}
-          <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold text-foreground mb-4">
-              Unser Standort und Öffnungszeiten
-            </h1>
-            <p className="text-xl text-muted-foreground">
-              Besuchen Sie uns an unserem zentralen Standort
-            </p>
-          </div>
+          <PageHeader title="Unser Standort und Öffnungszeiten" description="Besuchen Sie uns an unserem zentralen Standort" />
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Address & Contact Info */}
@@ -47,15 +40,11 @@ export default function LocationPage() {
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
                     <Phone className="h-4 w-4 text-muted-foreground" />
-                    <a href="tel:+41764233322">
-                      076 423 33 22
-                    </a>
+                    <a href="tel:+41764233322">076 423 33 22</a>
                   </div>
                   <div className="flex items-center gap-3">
                     <Instagram className="h-4 w-4 text-muted-foreground" />
-                    <a
-                      href="https://www.instagram.com/blendisbarbershop"
-                    >
+                    <a href="https://www.instagram.com/blendisbarbershop">
                       blendisbarbershop
                     </a>
                   </div>

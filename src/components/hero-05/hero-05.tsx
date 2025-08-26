@@ -28,12 +28,12 @@ const Hero05 = () => {
             </Button>
           </div>
         </div>
-        <div className="w-full -z-1 relative aspect-video lg:aspect-auto lg:w-[1000px] lg:h-screen bg-accent rounded-xl lg:rounded-none">
+        <div className="w-full -z-1 relative aspect-video lg:aspect-auto lg:w-[1000px] lg:h-screen rounded-xl lg:rounded-none">
           <Image
             src="/heropic.jpg"
             alt="Barbershop"
             fill
-            className="object-cover"
+            className="object-cover rounded-xl m-2"
           />
         </div>
       </div>
