@@ -6,7 +6,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { MapPin, Clock, Phone, Car, Bus } from "lucide-react";
+import { MapPin, Clock, Phone, Car, Bus, Instagram } from "lucide-react";
 
 export default function LocationPage() {
   return (
@@ -47,7 +47,17 @@ export default function LocationPage() {
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
                     <Phone className="h-4 w-4 text-muted-foreground" />
-                    <span>076 423 33 22</span>
+                    <a href="tel:+41764233322">
+                      076 423 33 22
+                    </a>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Instagram className="h-4 w-4 text-muted-foreground" />
+                    <a
+                      href="https://www.instagram.com/blendisbarbershop"
+                    >
+                      blendisbarbershop
+                    </a>
                   </div>
                 </div>
               </CardContent>
@@ -69,18 +79,14 @@ export default function LocationPage() {
                   </div>
                   <div className="flex justify-between items-center">
                     <span>Dienstag</span>
-                    <p className="text-xs text-muted-foreground">
-                      Ohne Termin
-                    </p>
+                    <p className="text-xs text-muted-foreground">Ohne Termin</p>
                     <Badge variant="secondary" className="text-right">
                       10:00 - 20:00
                     </Badge>
                   </div>
                   <div className="flex justify-between items-center">
                     <span>Mittwoch</span>
-                    <p className="text-xs text-muted-foreground">
-                      Ohne Termin
-                    </p>
+                    <p className="text-xs text-muted-foreground">Ohne Termin</p>
                     <Badge variant="secondary" className="text-right">
                       10:00 - 20:00
                     </Badge>
