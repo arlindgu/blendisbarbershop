@@ -18,7 +18,9 @@ export const NavigationSheet = () => {
             <Logo />
           </SheetDescription>
         </SheetHeader>
-        <NavMenu orientation="vertical" className="px-4" />
+        <SheetTrigger asChild>
+          <NavMenu orientation="vertical" className="px-4" />
+        </SheetTrigger>
       </SheetContent>
     </Sheet>
   );
