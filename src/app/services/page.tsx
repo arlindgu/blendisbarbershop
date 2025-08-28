@@ -1,5 +1,5 @@
 "use client"
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Card, CardHeader, CardTitle, CardContent, CardDescription } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 import { Scissors, CirclePlus, Slice, Calendar } from "lucide-react";
 import CalEmbed from "@/components/ui/bookingcal";
@@ -9,30 +9,21 @@ export default function ServicesPage() {
 
   const services = [
     {
-      title: "Haarschnitt",
+      title: "Erwachsene",
       description:
-        "Professioneller Haarschnitt für Erwachsene und Jugendliche.",
+        "Professioneller Haarschnitt für Erwachsene und Jugendliche ab 16 Jahren.",
       prices: [
-        { label: "Erwachsene", ageGroup: "ab 18 Jahren", price: "CHF 30" },
-        { label: "Jugendliche", ageGroup: "unter 18 Jahren", price: "CHF 20" },
-        { label: "Kinder", ageGroup: "unter 12 Jahren", price: "CHF 15" },
-        { label: "Design", ageGroup: "", price: "+ CHF 10" },
+        { label: "Haarschnitt", ageGroup: "", price: "CHF 30" },
+        { label: "Bartschnitt", ageGroup: "", price: "CHF 20" },
+        { label: "Haar- und Bartschnitt", ageGroup: "", price: "CHF40" },
       ],
     },
     {
-      title: "Bart",
-      description: "Individuelles Bart Styling für jeden Typ.",
+      title: "Kinder",
+      description:
+        "Professioneller Haarschnitt für Kinder unter 16 Jahren.",
       prices: [
-        { label: "Bart rasieren", ageGroup: "", price: "CHF 10" },
-        { label: "Bart färben", ageGroup: "", price: "CHF 15" },
-      ],
-    },
-    {
-      title: "Weitere Services",
-      description: "Zusätzliche Dienstleistungen für unsere Kunden.",
-      prices: [
-        { label: "Augenbrauen", ageGroup: "", price: "CHF 15" },
-        { label: "Wax Maske", ageGroup: "", price: "CHF 25" },
+        { label: "Haarschnitt", ageGroup: "", price: "CHF 20" },
       ],
     },
   ];
@@ -48,7 +39,7 @@ export default function ServicesPage() {
           title="Unsere Services und Preise"
           description="Entdecke unsere vielfältigen Dienstleistungen und Preise"
         />
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           {services.map((service, idx) => (
             <Card
               key={service.title}
@@ -62,7 +53,8 @@ export default function ServicesPage() {
                   {service.title}
                 </CardTitle>
               </CardHeader>
-              <CardContent className="p-6">
+              <CardContent>
+                <CardDescription className="mb-4">{service.description}</CardDescription>
                 <Table>
                   <TableBody>
                     {service.prices.map((price, i) => (
