@@ -15,7 +15,7 @@ export default function ServicesPage() {
       prices: [
         { label: "Haarschnitt", ageGroup: "", price: "CHF 30" },
         { label: "Bartschnitt", ageGroup: "", price: "CHF 20" },
-        { label: "Haar- und Bartschnitt", ageGroup: "", price: "CHF40" },
+        { label: "Haar- und Bartschnitt", ageGroup: "", price: "CHF 40" },
       ],
     },
     {
